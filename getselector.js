@@ -6,7 +6,8 @@
   // 5. 不存在时, 直接使用索引
   // 6. 向上查找 -> 执行 1 - 5, 直到到 body 为止
 
-  function getSelector(node) {
+  function getSelector(x, y) {
+    var node = document.elementFromPoint(x, y);
     var pathArr = [];
     walk(node, function(node) {
       if (node) {
